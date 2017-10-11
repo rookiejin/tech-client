@@ -8,6 +8,7 @@ import iView from 'iview'
 import 'iview/dist/styles/iview.css'
 import stores from './store'
 import api from './api'
+require("./app.sass")
 
 Vue.use(iView)
 Vue.use(Vuex)

@@ -26,14 +26,15 @@
 			return {
 				lists:null ,
 				page:0 ,
-				size: 10 ,
 			}
 		},
 		methods:{
 			getData : function(){
-				this.$http.get(`index?p=${this.page}&s=${this.size}`)
+				this.$http.post(`all`,{page:this.page})
 				  .then((e) => {
-				  	console.log(e);
+				  	if(e.length == 0 ) {
+				  		return ;
+				  	}
 				  	var arr = [] ;
 					var tmp = [];
 					var i = 0 ;
@@ -46,7 +47,6 @@
 						tmp.push(val);
 						i ++ ;
 					})
-					console.log(arr)
 					this.lists = arr ;
 				  })
 			}
@@ -66,9 +66,6 @@
 			}
 		},
 		computed : {
-			getSize() {
-				return this.$store.state.size 
-			}
 		}
 	}
 </script>
@@ -86,7 +83,7 @@
 	}
 	.main{
 		width:90%;
-		margin:auth;
+		margin:auto;
 	}
 	.boxmain{
 		margin-top:15px;

@@ -26,6 +26,15 @@ export default {
 </script>
 
 <style>
+*{
+  margin:0;
+  padding:0;
+}
+body  {
+  font-family:"Maven Pro,Microsoft YaHei,sans-serif!important";
+  background: linear-gradient(180deg,#000,#999) ;
+  background-repeat: no-repeat;
+}
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -41,10 +50,5 @@ export default {
   height: 64px;
   line-height: 64px;
   background: #252a33;
-}
-.bt-footer{
-  position: fixed;
-  bottom: 0px;
-  width:100%;
 }
 </style>

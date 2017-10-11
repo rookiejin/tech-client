@@ -8,9 +8,9 @@
 		>
 			<div>
 				<h1>{{ item.title }}</h1>
-				<img :src=" item.image" alt="" class="box-image">
+				<img :src=" item.thumb " alt="" class="box-image">
 				<h3 class="title">
-					{{ item.detail }}
+					{{ item.description }}
 				</h3>
 			</div>
 		</Card>
@@ -28,7 +28,7 @@
 </script>
 
 <style scoped>
-	    h1{
+    h1{
         padding: 20px 0px ;
         color:#111 !important;
     }
@@ -40,6 +40,9 @@
         padding: 5px ;
         overflow-x: hidden;
         color:#333;
+		text-overflow:ellipsis;  
+        overflow:hidden;  
+        white-space: nowrap;  
     }
     .box{
         background:#333;

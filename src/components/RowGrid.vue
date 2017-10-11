@@ -22,9 +22,6 @@
 </script>
 
 <style type="text/sass" scoped>
-	body{
-		background: #efefef;
-	}
 	.boxmain:not(:first-child){
 		margin-top:35px;
 	}
@@ -36,5 +33,4 @@
 			margin-top:40px;
 		}
 	}
-	
 </style>
