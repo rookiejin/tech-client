@@ -32,7 +32,8 @@ export default {
 }
 body  {
   font-family:"Maven Pro,Microsoft YaHei,sans-serif!important";
-  background: linear-gradient(180deg,#000,#999) ;
+  /* background: linear-gradient(180deg,#000,#333) ; */
+  background: #fff;
   background-repeat: no-repeat;
 }
 #app {
@@ -40,7 +41,7 @@ body  {
   -moz-osx-font-smoothing: grayscale;
 }
 #main {
-  padding: 0 20px;
+  padding: 0 0px;
   min-height: 400px;
   color: #4f4f4f;
 }

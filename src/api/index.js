@@ -18,6 +18,19 @@ http.interceptors.response.use((r) => { return r }, (e) => {
     console.log(e)
 })
 
+
+http.form = function(path, data, options) {
+    var str = [];
+    for (var i in data) {
+        if (typeof data[i] == Object) {
+            data[i] = JSON.stringify(data[i]);
+        }
+        str.push(i + "=" + data[i]);
+    }
+    str = str.join("&")
+    return this.post(path, str, options);
+}
+
 export default function install(Vue) {
     Object.defineProperty(Vue.prototype, '$http', {
         get() {

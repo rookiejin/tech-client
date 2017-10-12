@@ -19,7 +19,7 @@
 </template>
 
 <script>
-	import RowGrid from "./RowGrid.vue"
+	import RowGrid from "@/components/layouts/RowGrid.vue"
 	export default {
 		name : 'home' ,
 		data() {
@@ -38,7 +38,7 @@
 				  	var arr = [] ;
 					var tmp = [];
 					var i = 0 ;
-					e.data.forEach((val ,index) => { 
+					e.data.data.forEach((val ,index) => { 
 						if( i == 3) {
 							arr.push(tmp);
 							tmp = [];
@@ -71,7 +71,10 @@
 </script>
 
 <style scoped>
-		.top-banner{
+	.item-container{
+		padding:0 20px;
+	}
+	.top-banner{
 		width:100%;
 		height:400px;
 		text-align: center;
