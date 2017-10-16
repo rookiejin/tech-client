@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-  <header class="bt-header">
-    <vi-header></vi-header>
-  </header>
+  <vi-header></vi-header>
   <div id="main">
       <router-view></router-view>
   </div>
@@ -25,7 +23,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 *{
   margin:0;
   padding:0;
@@ -49,7 +47,6 @@ body  {
 .bt-footer {
   padding: 0 40px;
   height: 64px;
-  line-height: 64px;
   background: #252a33;
 }
 </style>

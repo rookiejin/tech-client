@@ -3,19 +3,19 @@
 	<top-title :vi-title="title" :vi-description="description" />
 	<div class="wrap">
 		<template v-for="list in lists">
-			<router-link
-				:to="{name: 'video' , params:{id:list.id}}"
-			>
 				<Row>
-					<Col :push="6" :span="12" class="row">
-						<div class="col">
-							<Icon  :color="startColor" type="ios-star-outline"></Icon>
-							<span class="title">{{ list.title }}</span>
-							<span class="time">{{ list.total_time }}</span>
-						</div>
-					</Col>
+					<router-link
+						:to="{name: 'video' , params:{id:list.id}}"
+					>
+							<Col :push="6" :span="12" class="row">
+								<div class="col">
+									<Icon  :color="startColor" type="ios-star-outline"></Icon>
+									<span class="title">{{ list.title }}</span>
+									<span class="time">{{ list.total_time }}</span>
+								</div>
+							</Col>
+					</router-link>
 				</Row>
-			</router-link>
 		</template>
 		</div>
 		<div class="knowledge">
@@ -90,6 +90,7 @@ export default {
 	min-height: 200px;
 	margin-top: 40px;
 	padding-bottom:200px;
+	background:#111 ;
 }
 
 .row {
